@@ -1,0 +1,23 @@
+<?php
+
+include("XML/Serializer.php");
+
+$path = 'https://static.dlgamer.com/feeds/general_feed_it.json';
+$file_content = file_get_contents($path);
+
+$file_content = json_to_xml($file_content);
+
+function json_to_xml($json) {
+  $serializer = new XML_Serializer();
+  $obj = json_decode($json);
+
+  if ($serializer->serialize($obj)) {
+    return $serializer->getSerializedData();
+  }
+  else {
+    return NULL;
+  }
+}
+
+print($file_content);
+?>

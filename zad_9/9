@@ -1,0 +1,37 @@
+<?php
+
+$path = 'http://4609531:SzZYJ%Aj@datatransfer.cj.com/datatransfer/files/4609531/outgoing/productcatalog/205969/Vans_UK-Product_Feed.txt.gz';
+$dir_name = "meh";
+
+if(file_exists($dir_name)) {
+  echo "\nDirectory 'meh' already created\n\n";
+}
+else {
+  mkdir($dir_name);
+  chmod($dir_name,0750);
+}
+
+
+if(file_exists('Vans_UK-Product_Feed.txt.gz')) {
+  echo "\nGz file already downloaded\n";
+}
+
+else {
+  exec('wget http://4609531:SzZYJ%Aj@datatransfer.cj.com/datatransfer/files/4609531/outgoing/productcatalog/205969/Vans_UK-Product_Feed.txt.gz');
+  exec(' gunzip -d Vans_UK-Product_Feed.txt.gz');
+}
+
+
+rename('Vans_UK-Product_Feed.txt','meh/Vans_UK-Product_Feed.txt');
+
+//$file = gzfile($path);
+//print_r($file);
+
+//gzopen('Vans_UK-Product_Feed.txt.gz','r');
+
+//$file = gzdecode($file);
+//print($file);
+
+
+
+?>

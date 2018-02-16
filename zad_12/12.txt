@@ -1,0 +1,10 @@
+There is french store http://www.makeupsens.com/.
+Write regexes that will match: main categories (url and cat name), subcategories (url and name), next page link (url),
+info about product (all you can get and can be used in admin - required minimum is product name, url, ident and price).
+
+Main categories: https://regex101.com/r/62PZgF/2
+Subcategories:https://regex101.com/r/62PZgF/3
+Next page link:https://regex101.com/r/62PZgF/4
+Product:https://regex101.com/r/62PZgF/5
+
+Product Info for each product:https://regex101.com/r/62PZgF/6

@@ -1,0 +1,4 @@
+[REGEX] Match and capture all products from: https://mcru.co.uk/product-category/power-supplies/squeezebox-power-supply-s/?v=9b7d173b068d
+Each match should contain everything inside product box.
+
+Answer: https://regex101.com/r/U8TjEl/1

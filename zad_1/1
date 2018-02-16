@@ -1,0 +1,10 @@
+<?php
+
+$path = 'text_1';
+$file_content = file_get_contents($path);
+$sign = "\"";
+
+$file_content = str_replace($sign, '',$file_content);
+print($file_content);
+
+?>

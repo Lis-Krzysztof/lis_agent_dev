@@ -1,0 +1,51 @@
+<?php
+$path = 'https://www.pixmania.it/api/pcm/custom_categories?ids=u_1&ids=u_2&ids=u_3&ids=u_4&ids=u_5&ids=u_6&ids=u_7&ids=u_8';
+$data = file_get_contents($path);
+$data = json_decode($data,true);
+//print_r($data);
+$cathe = array('');
+
+
+foreach ($data['categories'] as $key => $value) {
+
+  //array_push($cathe,$value['name']['it-IT']);
+
+  foreach ($value as $main => $under) {
+    //print_r($value['children']);
+
+      foreach ($under as $minor => $majnor) {
+        if (isset($majnor['name']['it-IT'])) {
+
+
+          array_push($cathe[$value['name']['it-IT']],$value['name']['it-IT'] -> $majnor['name']['it-IT']);
+
+
+
+          }
+      }
+
+
+  }
+
+
+
+}
+print_r($cathe);
+//print_r($data);
+
+/*
+foreach ($data as $key => $value) {
+  //print_r($value->image);
+  $cache['name']  = $value->image->title;
+  $cache['id']    = $value->variation_id;
+  $cache['price'] = $value->display_price;
+  print
+*/
+
+
+
+
+
+
+
+?>

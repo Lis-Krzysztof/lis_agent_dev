@@ -1,0 +1,7 @@
+Write regex that checks if email address is valid. To simplify: email is anycharacter_anynumberofcharacters@domain
+
+The problem here is '@' character since it is also covered by "anycharacter" but can't be placed twice in valid email adress.
+
+Yet here's an answer: https://regex101.com/r/njj7DN/1
+
+And here is the case where characters that make email not valid are not considered:  https://regex101.com/r/njj7DN/2

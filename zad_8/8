@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+text=$(cat hipster.txt)
+echo ${text//[B,b]iodiesel/""} > hipster.txt
