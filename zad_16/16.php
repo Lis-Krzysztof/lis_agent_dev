@@ -7,7 +7,7 @@ $p_data = array();
 $p_dat = array();
 $p_data_char = array();
 $p_data_char_final = array();
-$names = array('code','Product name','Product page','Product img','SKU','Junk status','Price','Versions');
+$names = array('code','Product name','Product page','Product img','SKU','Junk status','Price',);
 
 
 foreach ($data[1] as $key => $value) {
@@ -30,19 +30,13 @@ foreach ($p_dat as $key => $value) {
 
 
 foreach ($p_data as $key => $value) {
-  //print_r($value);
+  foreach ($value as $max => $min) {
 
-  //array_push($p_data[$key][$value], $p_data_char[$key]);
-  foreach ($p_data[$key] as $key => $value) {
-    # code...
-    http://www.triaxe-store.com/catalog/category/moreproducts
+
+
   }
-
-
 }
 
-
-/*
 
 
 foreach ($p_data_char as $key => $value) {
@@ -51,24 +45,5 @@ foreach ($p_data_char as $key => $value) {
 
 
 
-foreach ($p_data as $key => $value) {
-  print_r($value);
-}
-
-
-
-
-
-*/
-
-
-
-//print_r($pd);
-//print_r($data);
-//print_r($p_data);
-//print_r($p_dat);
-//print_r($all_data);
-//print_r($pd_char);
-//print_r($p_data_char);
-//print_r($p_data_char_final);
+print_r($p_data_char_final);
 ?>
